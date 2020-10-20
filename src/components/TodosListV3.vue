@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { computed, reactive, toRefs } from "vue";
+import { computed, ref } from "vue";
 
 export default {
   props: {
@@ -29,30 +29,31 @@ export default {
   },
 
   setup() {
-    const state = reactive({
-      new_task: "",
-      todos: [
-        { title: "Task 1", completed: true },
-        { title: "Task 2", completed: false },
-      ],
-      completedTodosCount: computed(() => {
-        return state.todos.filter((task) => task.completed === true).length;
-      }),
-      pendingTodosCount: computed(() => {
-        return state.todos.filter((task) => !task.completed).length;
-      }),
+    const new_task = ref("");
+
+    const todos = ref([
+      { title: "Task 1", completed: true },
+      { title: "Task 2", completed: false },
+    ]);
+
+    const completedTodosCount = computed(() => {
+      return todos.value.filter((task) => task.completed === true).length;
+    });
+
+    const pendingTodosCount = computed(() => {
+      return todos.value.filter((task) => !task.completed).length;
     });
 
     function addTask() {
-      if (state.new_task) {
-        state.todos.push({ title: state.new_task, completed: false });
-        state.new_task = "";
+      if (new_task.value) {
+        todos.value.push({ title: new_task.value, completed: false });
+        new_task.value = "";
       }
     }
 
     function deleteTask(task) {
-      var index = state.todos.indexOf(task);
-      state.todos.splice(index, 1);
+      var index = todos.value.indexOf(task);
+      todos.value.splice(index, 1);
     }
 
     function toggleTaskStatus(task) {
@@ -60,7 +61,10 @@ export default {
     }
 
     return {
-      ...toRefs(state),
+      new_task,
+      todos,
+      completedTodosCount,
+      pendingTodosCount,
       addTask,
       deleteTask,
       toggleTaskStatus,
