@@ -6,6 +6,7 @@
 3. **[Ref vs Reactive - Vue 3 Composition API](https://www.youtube.com/watch?v=JJM7yCHLMu4)**
 4. **[watchEffect vs watch - Vue 3](https://www.youtube.com/watch?v=mM-P7S2sXQ4)**
 5. **[Multiple v-model for custom components](https://www.youtube.com/watch?v=5TFelzoDMBQ)**
+6. **[Vue 3 Teleport](https://www.youtube.com/watch?v=cwaShbUMV9w)**
 
 ## Project setup
 ```

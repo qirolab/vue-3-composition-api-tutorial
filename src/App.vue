@@ -9,7 +9,13 @@
     </div> -->
 
     <!-- <WatchExample /> -->
-    <VModelsExample />
+    <!-- <VModelsExample /> -->
+
+    <div
+      style="width: 600px; height: 600px; position: relative; font-size: 28px"
+    >
+      <TeleportExample />
+    </div>
   </div>
 </template>
 
@@ -17,7 +23,8 @@
 // import TodosList from "./components/TodosList";
 // import TodosListV3 from "./components/TodosListV3";
 // import WatchExample from "./components/WatchExample";
-import VModelsExample from "./components/v-models/VModelsExample";
+// import VModelsExample from "./components/v-models/VModelsExample";
+import TeleportExample from "./components/teleport/TeleportExample";
 
 export default {
   name: "App",
@@ -25,7 +32,8 @@ export default {
     // TodosList,
     // TodosListV3,
     // WatchExample,
-    VModelsExample,
+    // VModelsExample,
+    TeleportExample,
   },
 };
 </script>
