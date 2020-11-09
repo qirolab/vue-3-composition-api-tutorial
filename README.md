@@ -7,6 +7,7 @@
 4. **[watchEffect vs watch - Vue 3](https://www.youtube.com/watch?v=mM-P7S2sXQ4)**
 5. **[Multiple v-model for custom components](https://www.youtube.com/watch?v=5TFelzoDMBQ)**
 6. **[Vue 3 Teleport](https://www.youtube.com/watch?v=cwaShbUMV9w)**
+7. **[Vue 3 Suspense and Lazy Load Components](https://www.youtube.com/watch?v=TMlQzHrxeNI)**
 
 ## Project setup
 ```
